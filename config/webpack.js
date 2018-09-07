@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
 
     mode: 'development',
@@ -8,7 +10,7 @@ module.exports = {
     },
 
     output: {
-        path: __dirname + '/.tmp/public',
+        path: path.resolve(__dirname, '..', '.tmp', 'public'),
         filename: '[name].bundle.js'
     },
 

@@ -1,4 +1,6 @@
-module.exports.webpack = {
+module.exports = {
+
+    mode: 'development',
 
     entry: {
         'js/app': './assets/js/app.js',
@@ -7,7 +9,7 @@ module.exports.webpack = {
 
     output: {
         path: __dirname + '/.tmp/public',
-        filename: 'js/[name].bundle.js'
+        filename: '[name].bundle.js'
     },
 
     module: {

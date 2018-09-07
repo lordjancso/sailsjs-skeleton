@@ -1,28 +1,15 @@
-const path = require('path');
+var Encore = require('@symfony/webpack-encore');
 
-module.exports = {
+Encore
+    .setOutputPath('.tmp/build')
+    .setPublicPath('/build')
+    .enableSassLoader()
+    .enableSourceMaps(!Encore.isProduction())
+    .enableVueLoader()
+    .addEntry('js/app', './assets/js/app.js')
+    .addStyleEntry('css/app', './assets/sass/app.scss')
+    .enableVersioning()
+    .cleanupOutputBeforeBuild()
+    .enableBuildNotifications();
 
-    entry: {
-        'js/app': './assets/js/app.js',
-        'css/app': './assets/sass/app.scss'
-    },
-
-    output: {
-        path: path.resolve(__dirname, '..', '.tmp', 'public'),
-        filename: '[name].bundle.js'
-    },
-
-    module: {
-        rules: [
-            {
-                test: /\.scss$/,
-                use: [
-                    'style-loader', // creates style nodes from JS strings
-                    'css-loader', // translates CSS into CommonJS
-                    'sass-loader' // compiles Sass to CSS, using Node Sass by default
-                ]
-            }
-        ]
-    }
-
-};
+module.exports = Encore.getWebpackConfig();

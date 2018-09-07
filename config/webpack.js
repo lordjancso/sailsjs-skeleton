@@ -2,8 +2,6 @@ const path = require('path');
 
 module.exports = {
 
-    mode: 'development',
-
     entry: {
         'js/app': './assets/js/app.js',
         'css/app': './assets/sass/app.scss'

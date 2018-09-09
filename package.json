@@ -33,8 +33,9 @@
     "test": "npm run lint && npm run custom-tests && echo 'Done.'",
     "lint": "eslint . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look good.'",
     "custom-tests": "echo \"(No other custom tests yet.)\" && echo",
-    "dev": "yarn encore dev --config config/webpack.js",
-    "prod": "yarn encore prod --config config/webpack.js"
+    "dev": "yarn encore dev",
+    "watch": "yarn encore dev --watch",
+    "prod": "yarn encore prod"
   },
   "main": "app.js",
   "repository": {

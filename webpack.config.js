@@ -1,7 +1,7 @@
 var Encore = require('@symfony/webpack-encore');
 
 Encore
-    .setOutputPath('.tmp/build')
+    .setOutputPath('.tmp/public/build/')
     .setPublicPath('/build')
     .enableSassLoader()
     .enableSourceMaps(!Encore.isProduction())

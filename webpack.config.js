@@ -8,7 +8,7 @@ Encore
     .enableVueLoader()
     .addEntry('js/app', './assets/js/app.js')
     .addStyleEntry('css/app', './assets/sass/app.scss')
-    .enableVersioning()
+    .enableVersioning(Encore.isProduction())
     .cleanupOutputBeforeBuild()
     .enableBuildNotifications();
 

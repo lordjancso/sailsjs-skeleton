@@ -33,7 +33,7 @@
     "custom-tests": "echo \"(No other custom tests yet.)\" && echo",
     "dev": "yarn encore dev",
     "watch": "yarn encore dev --watch",
-    "prod": "yarn encore prod"
+    "prod": "yarn encore production"
   },
   "main": "app.js",
   "repository": {

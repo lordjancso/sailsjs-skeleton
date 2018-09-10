@@ -33,16 +33,16 @@
     "test": "npm run lint && npm run custom-tests && echo 'Done.'",
     "lint": "eslint . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look good.'",
     "custom-tests": "echo \"(No other custom tests yet.)\" && echo",
-    "dev": "yarn encore dev",
+    "dev": "nodemon --ext js,json --watch .tmp/public/build --watch api --watch config app.js",
     "watch": "yarn encore dev --watch",
     "prod": "yarn encore production"
   },
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/anonymous node/sails user/sailsjs-skeleton.git"
+    "url": "git://github.com/lordjancso/sailsjs-skeleton.git"
   },
-  "author": "anonymous node/sails user",
+  "author": "lordjancso",
   "license": "",
   "engines": {
     "node": ">=10.9"

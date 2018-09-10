@@ -1,5 +1,6 @@
 FROM node:10-alpine
 MAINTAINER lordjancso <lordjancso@gmail.com>
+ENV NODE_ENV=development
 
 RUN apk update && \
     apk upgrade && \
@@ -30,6 +31,6 @@ RUN ln -s /usr/bin/sassc /usr/bin/sass
 ENV SKIP_SASS_BINARY_DOWNLOAD_FOR_CI true
 ENV SKIP_NODE_SASS_TESTS true
 
-RUN yarn global add sails jscs
+RUN yarn global add sails jscs nodemon
 
 WORKDIR /app
